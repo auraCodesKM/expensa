@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensa - Expense Tracker</title>
+    <link rel="stylesheet" href="et.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo-section">
+                <img src="logo.png" alt="Expensa Logo" class="logo">
+                <h1 class="expensa-title">Expensa</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="et.html" class="active">Expense Tracker</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Track Your Expenses</h2>
+            <div class="dashboard">
+                <div class="expense-form-container">
+                    <h3>Add New Expense</h3>
+                    <form id="expense-form">
+                        <div class="form-group">
+                            <label for="expense-name">Expense Name:</label>
+                            <input type="text" id="expense-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expense-amount">Amount:</label>
+                            <input type="number" id="expense-amount" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expense-date">Date:</label>
+                            <input type="date" id="expense-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expense-category">Category:</label>
+                            <select id="expense-category" required>
+                                <option value="food">Food</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="movies">Movies</option>
+                                <option value="travel">Travel</option>
+                                <option value="bills">Bills</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Add Expense</button>
+                    </form>
+                </div>
+
+                <div class="expense-summary">
+                    <h3>Expense Summary</h3>
+                    <div class="summary-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <p>Total Expenses: $<span id="total-expenses">0.00</span></p>
+                    </div>
+                    <div class="summary-item">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Highest Expense: $<span id="highest-expense">0.00</span></p>
+                    </div>
+                    <div class="summary-item">
+                        <i class="fas fa-tags"></i>
+                        <p>Most Common Category: <span id="common-category">N/A</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expense-container">
+                <section class="expense-list">
+                    <h3>Your Expenses</h3>
+                    <ul id="expense-items"></ul>
+                </section>
+
+                <section class="expense-distribution">
+                    <h3>Expense Distribution</h3>
+                    <canvas id="expense-chart"></canvas>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="codetheworld-io">
+                <a href="https://www.linkedin.com" style="--color: #0072b1"> 
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com" style="--color: #E1306C"> 
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/your-phone-number" style="--color: #25D366"> 
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com" style="--color: #4267B2"> 
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Expensa. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="et.js"></script>
+</body>
+</html>

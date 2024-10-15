@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-image: url('index.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-container {
+    text-align: center;
+    background-color: rgba(46, 7, 63, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5), 0 4px 30px rgba(169, 73, 225, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(169, 73, 225, 0.9), 0 8px 40px rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(169, 73, 225, 0.7);
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.expensa-text {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7e00, #ff2b00, #ff2bff, #4b00ff, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.solution-text {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgb(255, 81, 119);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(
+        -60deg,
+        #ffffff00 0%,
+        #ffffff00 40%,
+        #ffffff44 40%,
+        #ffffff44 60%,
+        #ffffff00 60%,
+        #ffffff00 100%
+    );
+    background-size: 200% 100%;
+    background-position-x: 150%;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    animation: shimmer 1s forwards;
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position-x: 150%;
+    }
+    100% {
+        background-position-x: 50%;
+    }
+}

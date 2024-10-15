@@ -1,0 +1,224 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: #ebd3f8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(46, 7, 63, 0.8);
+}
+
+header .logo-section {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+header .expensa-title {
+    color: #ebd3f8;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(235, 211, 248, 0.5);
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ebd3f8;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ad49e1;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ad49e1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #9332c7;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(46, 7, 63, 0.8);
+    width: 100%;
+}
+
+footer .codetheworld-io {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .codetheworld-io a {
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-size: 1.5em;
+}
+
+footer .codetheworld-io a:hover {
+    background: var(--color);
+    color: #050801;
+    box-shadow: 
+        0 0 5px var(--color),
+        0 0 25px var(--color),
+        0 0 50px var(--color),
+        0 0 200px var(--color);
+}
+
+/* Div Box Hover Effect */
+.hover-box {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-box:hover {
+    box-shadow: 0 0 20px rgba(173, 73, 225, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    .codetheworld-io {
+        flex-wrap: wrap;
+    }
+}
+
+/* Add these styles to the existing home.css file */
+
+.hero-section {
+    background-color: rgba(46, 7, 63, 0.8);
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature {
+    background-color: rgba(46, 7, 63, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.feature i {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ad49e1;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+/* Existing hover-box styles should work for the new elements */
